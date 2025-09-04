@@ -1,7 +1,7 @@
-// Contract addresses (to be updated when contracts are deployed)
+// Contract addresses (public blockchain data - safe to expose client-side)
 export const CONTRACT_ADDRESSES = {
-  PROJECT_REGISTRY: process.env.NEXT_PUBLIC_PROJECT_REGISTRY_ADDRESS || "",
-  CARBON_TOKEN: process.env.NEXT_PUBLIC_CARBON_TOKEN_ADDRESS || "",
+  PROJECT_REGISTRY: process.env.NEXT_PUBLIC_PROJECT_REGISTRY_ADDRESS || "0x0000000000000000000000000000000000000000",
+  CARBON_TOKEN: process.env.NEXT_PUBLIC_CARBON_CONTRACT_ADDRESS || "0x0000000000000000000000000000000000000000",
 }
 
 // Supported networks

@@ -41,8 +41,14 @@ export function useWallet() {
           method: "eth_chainId",
         })
 
-        // Get balance (placeholder for now)
-        const balance = "0"
+        // Get balance
+        const balanceWei = await window.ethereum.request({
+          method: "eth_getBalance",
+          params: [address, "latest"],
+        })
+
+        // Convert from wei to ETH
+        const balance = (Number.parseInt(balanceWei, 16) / Math.pow(10, 18)).toFixed(4)
 
         setWallet({
           isConnected: true,
@@ -81,10 +87,17 @@ export function useWallet() {
               method: "eth_chainId",
             })
 
+            const balanceWei = await window.ethereum.request({
+              method: "eth_getBalance",
+              params: [accounts[0], "latest"],
+            })
+
+            const balance = (Number.parseInt(balanceWei, 16) / Math.pow(10, 18)).toFixed(4)
+
             setWallet({
               isConnected: true,
               address: accounts[0],
-              balance: "0",
+              balance,
               chainId: Number.parseInt(chainId, 16),
             })
           }
