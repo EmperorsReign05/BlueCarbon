@@ -18,7 +18,7 @@ export default function HomePage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Leaf className="h-8 w-8 text-primary" />
-              <h1 className="text-2xl font-bold text-foreground">Blue Carbon MRV</h1>
+              <h1 className="text-2xl font-bold text-foreground">BlueMRV</h1>
             </div>
             <div className="flex items-center gap-4">
               <Button

@@ -7,7 +7,7 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Blue Carbon MRV Platform",
+  title: "BlueMRV",
   description: "Blockchain-based carbon credit management for blue carbon projects",
   generator: "v0.app",
 }
